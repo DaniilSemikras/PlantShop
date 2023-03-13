@@ -228,6 +228,7 @@ $breakpoint_m:480px;
   cursor: pointer;
   background-image: url(../images/btn-search.svg);
   background-repeat: no-repeat;
+  background-position: center;
   transition: 0.3s all;
 }
 .header button:hover {
@@ -255,6 +256,40 @@ $breakpoint_m:480px;
   }
   .header__form-search {
     width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    height: 650px;
+  }
+  .header__form-search input {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.616);
+  }
+  .header__form-search button {
+    top: 5px;
+    right: 9px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    height: 850px;
+    padding-top: 25px;
+  }
+  .header__title {
+    margin-top: 25px;
+    line-height: 50px;
+  }
+  .header__subtitle {
+    background-color: rgba(0, 0, 0, 0.367);
+    border-radius: 24px;
+    padding: 10px;
+  }
+  .header__navigation-list {
+    gap: 5px;
+    flex-direction: column;
   }
 }
 .advantages {

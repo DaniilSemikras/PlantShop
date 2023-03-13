@@ -39,7 +39,8 @@
             color: transparent;
             transition: 0.3s ease;
             cursor: pointer;
-            &:hover{
+
+            &:hover {
                 color: #2AF598;
             }
         }
@@ -158,6 +159,7 @@
         cursor: pointer;
         background-image: url(../images/btn-search.svg);
         background-repeat: no-repeat;
+        background-position: center;
         transition: 0.3s all;
 
         &:hover {
@@ -167,29 +169,77 @@
 }
 
 
-@include desktop{
-    .header{
+@include desktop {
+    .header {
         height: 800px;
-        &__title{
+
+        &__title {
             font-size: 45px;
             margin-top: 45px;
             line-height: 40px;
         }
-        &__subtitle{
+
+        &__subtitle {
             font-size: 20px;
             margin-top: 20px;
         }
-        &__navigation{
-            &-list{
+
+        &__navigation {
+            &-list {
                 gap: 20px;
             }
-            &-item{
+
+            &-item {
                 font-size: 16px;
             }
         }
-        &__form{
-            &-search{
+
+        &__form {
+            &-search {
                 width: 300px;
+            }
+        }
+    }
+}
+
+@include tablets {
+    .header {
+        height: 650px;
+
+        &__form {
+            &-search{
+                input {
+                    height: 50px;
+                    background-color: rgba(0, 0, 0, 0.616);
+                }
+                button{
+                top: 5px;
+                right: 9px;
+                width: 40px;
+                height: 40px;
+                }
+            }
+        }
+    }
+}
+
+@include phones{
+    .header{
+        height: 850px;
+        padding-top: 25px;
+        &__title{
+            margin-top: 25px;
+            line-height: 50px;
+        }
+        &__subtitle{
+            background-color: rgba(0, 0, 0, 0.367);
+            border-radius: 24px;
+            padding: 10px;
+        }
+        &__navigation{
+            &-list{
+                gap: 5px;
+                flex-direction: column;
             }
         }
     }
