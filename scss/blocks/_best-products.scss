@@ -1,0 +1,130 @@
+.best-products{
+    margin-top: 156px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 75px;
+        color: #081323;
+        width: 370px;
+        padding-bottom: 16px;
+    }
+    &__more{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        color: #4F4F4F;
+        position: relative;
+        &::after{
+            content: "";
+            background-image: url(../images/arrow.png);
+            position: absolute;
+            top: 4px;
+            right: -35px;;
+            width: 24px;
+            height: 21px;
+        }
+    }
+    &__flowers{
+        &-list{
+            display: flex;
+            gap: 32px;
+        }
+        &-card{
+            z-index: 1;
+            position: relative;
+            filter: drop-shadow(0px 4px 30px rgba(221, 218, 218, 0.25));
+            transition: 1s all;
+            &:hover img{
+                transform: translateY(85px);
+                overflow-y: hidden;
+            }
+            &:hover .best-products__flowers-title{
+                font-size: 32px;
+            }
+            &:hover{
+                transform: translateY(-50px);
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 120px;
+                left: 0;
+                width: 100%;
+                height: 60%;
+                background-color: #C1D0E4;
+                z-index:-1;
+                border-top-right-radius:50px ;
+                border-top-left-radius: 50px;
+        }
+        }
+        &-title{
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 38px;
+            transition: .5s all;
+        }
+        img{
+            max-width: 100%;
+            width: 306px;
+            margin-bottom: 60px;
+            position: relative;
+            z-index:2;
+            transition: 0.35s all;
+            max-height: 320px;
+        }
+        &-info{
+            padding: 26px 38px;
+            max-height: 260px;
+            height: 260px;
+            background-color: white;
+            border-radius: 50px;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            &-bottom{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            }
+        &-rating{
+            display: flex;
+            margin-top: 7px;
+            transition: 0.5s all;
+        }
+        .star{
+            background-image: url(../images/star.svg);
+            background-repeat: no-repeat;
+            width: 25px;
+            height: 25px;
+        }
+        &-price{
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 38px;
+        }
+        &-add{
+            color: white;
+            font-size: 35px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%);
+            transition: 0.4s all;
+            &:hover{
+                font-size: 50px;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.advantages{
+    margin-top: 90px;
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item{
+        padding: 0 30px;
+        &-wrapper{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        &-text{
+            color: #081323;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 38px;
+        }
+        &-subtitle{
+            color: #828282;
+            margin-top: 16px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Work Sans';
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+body {
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    width: 15px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: 3;
+    border-radius: 3px;
+}
+
+.container{
+    max-width: 1510px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.none{
+    display: none;
+}
+
+.overflow{
+    overflow-y: hidden;
+}
+
+.visible{
+    transition: 0.5s;
+    opacity: 0.3;
+}
+
+$primary_color:#2AF598;
+$secondary_color-blue:#009EFD;
+$secondary_color-white:#F9F9F9;
+
+$breakpoint_xxl:1200px;
+$breakpoint_xl:992px;
+$breakpoint_l:768px;
+$breakpoint_m:480px;
