@@ -390,6 +390,7 @@ $breakpoint_m:480px;
 .best-products__flowers-list {
   display: flex;
   gap: 32px;
+  align-items: baseline;
 }
 .best-products__flowers-card {
   z-index: 1;
@@ -483,6 +484,36 @@ $breakpoint_m:480px;
   font-size: 50px;
 }
 
+@media (max-width: 1200px) {
+  .best-products {
+    margin-top: 20px;
+  }
+  .best-products .container {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .best-products__title {
+    width: initial;
+  }
+  .best-products__text {
+    text-align: center;
+  }
+  .best-products__flowers-list {
+    flex-direction: column;
+  }
+  .best-products__flowers-card img {
+    width: 300px;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+  .best-products__flowers-card:hover img {
+    transform: translateY(50px);
+  }
+  .best-products__flowers-add {
+    width: 40px;
+    height: 40px;
+  }
+}
 .references {
   text-align: center;
   margin-top: 168px;
