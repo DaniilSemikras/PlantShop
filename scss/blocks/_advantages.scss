@@ -4,6 +4,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        align-items: center;
     }
     &__item{
         padding: 0 30px;
@@ -24,6 +25,45 @@
             font-weight: 500;
             font-size: 20px;
             line-height: 23px;
+        }
+    }
+}
+
+@include desktop{
+    .advantages{
+        margin-top: 0px;
+        text-align: center;
+        &__list{
+            justify-content: center;
+            gap: 30px;
+        }
+        &__item{
+            &-title{
+                font-size: 32px;
+            }
+            &-subtitle{
+                font-size: 24px;
+            }
+            img{
+                width: 45px;
+            }
+        }
+    }
+}
+
+@include laptop{
+    .advantages{
+        &__list{
+            flex-direction: column;
+        }
+        &__item{
+            &-title{
+                font-size: 24px;
+            }
+            &-subtitle{
+                font-size: 16px;
+                margin-top: initial;
+            }
         }
     }
 }
