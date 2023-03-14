@@ -553,36 +553,47 @@ $breakpoint_m:480px;
 .references__cards-right img {
   max-width: 100%;
 }
-.references .image-container {
-  position: relative;
-}
-.references .image-container:hover .overlay {
-  opacity: 1;
-}
-.references .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 99%;
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: all 1.5s;
-  border-radius: 50px;
+.references__card-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-.references .overlay p {
+.references__card-wrapper .references__card-text {
+  position: absolute;
   font-weight: 600;
   font-size: 64px;
-  line-height: 75px;
-  text-align: center;
+  opacity: 0;
+  color: white;
+  transition: 0.5s all;
 }
-.references .image-container:hover img {
-  filter: brightness(70%);
+.references__card-wrapper img {
+  transition: 0.5s all;
+}
+.references__card-wrapper:hover img {
+  filter: brightness(40%);
+}
+.references__card-wrapper:hover .references__card-text {
+  opacity: 1;
 }
 
+@media (max-width: 768px) {
+  .references {
+    margin-top: 60px;
+  }
+  .references__card-wrapper .references__card-text {
+    font-size: 30px;
+  }
+  .references__title {
+    font-size: 25px;
+    line-height: normal;
+  }
+}
+@media (max-width: 480px) {
+  .references__card-wrapper .references__card-text {
+    font-size: 15px;
+  }
+}
 .caring {
   margin-top: 182px;
 }
@@ -663,6 +674,7 @@ $breakpoint_m:480px;
   height: 71px;
   padding-left: 30px;
   border-radius: 50px;
+  padding-right: 170px;
   border: none;
   background: rgba(255, 255, 255, 0.2);
   color: white;

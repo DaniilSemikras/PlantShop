@@ -44,37 +44,56 @@
         }
     }
 
-    .image-container {
-        position: relative;
-    }
-
-    .image-container:hover .overlay {
-        opacity: 1;
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 99%;
-        opacity: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        transition: all 1.5s;
-        border-radius: 50px;
+    &__card-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+        position: relative;
 
-    .overlay p {
-        font-weight: 600;
-        font-size: 64px;
-        line-height: 75px;
-        text-align: center;
-    }
+        .references__card-text {
+            position: absolute;
+            font-weight: 600;
+            font-size: 64px;
+            opacity: 0;
+            color: white;
+            transition: 0.5s all;
+        }
 
-    .image-container:hover img {
-        filter: brightness(70%);
+        img {
+            transition: 0.5s all;
+        }
+
+        &:hover img {
+            filter: brightness(40%);
+        }
+
+        &:hover .references__card-text {
+            opacity: 1;
+        }
+    }
+}
+
+@include tablets {
+    .references {
+        margin-top: 60px;
+        &__card-wrapper {
+            .references__card-text {
+                font-size: 30px;
+            }
+        }
+        &__title{
+            font-size: 25px;
+            line-height: normal;
+        }
+    }
+}
+
+@include phones {
+    .references {
+        &__card-wrapper {
+            .references__card-text {
+                font-size: 15px;
+            }
+        }
     }
 }
